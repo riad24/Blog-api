@@ -1,0 +1,43 @@
+<div class="grid_10">
+    <div class="box round first grid">
+        <h2> Category wise Post Count</h2>
+        <div class="block">
+            <h3>All Category Count</h3>
+            <table border="1" class="data display datatable" id="example">
+                <thead>
+                <tr style="border: 3px solid wheat">
+                    <th>Category</th>
+                    <th>Category Count</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd gradeX" ng-repeat="post in catCount">
+                    <th>{{post._id}}</th>
+                    <th  ui-sref="postList"> {{post.count}}</th>
+                </tr>
+
+                </tbody>
+            </table>
+            <h3>All Post Count</h3>
+            <table border="1" class="data display datatable" id="example1">
+                <thead>
+                <tr style="border: 3px solid wheat">
+                    <th>All post</th>
+                    <th>post Count</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd gradeX">
+                    <th>Post</th>
+                    <th  ui-sref="postList"> {{postCount}}</th>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,74 @@
+﻿<div class="grid_10">
+
+    <div class="box round first grid">
+        <h2>About Us</h2>
+        <div class="block">
+            <table class="form">
+                <tr>
+                    <td>
+                        <label>About Header</label>
+                    </td>
+                    <td>
+                        <input type="text" ng-model="about.aboutHeader" name="about.aboutHeader"
+                               class="medium"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>About Quotes</label>
+                    </td>
+                    <td>
+                        <input type="text" ng-model="about.aboutQuotes" name="about.aboutQuotes"
+                               class="medium"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align: top; padding-top: 9px;">
+                        <label>Description</label>
+                    </td>
+                    <td>
+                        <textarea class="tinymce" ng-model="about.description" name="about.description"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <button disabled ng-if="selectedItemIndex == null"
+                                ng-click="saveAbout(contact)"> Add
+                        </button>
+                        <button ng-if="selectedItemIndex != null"
+                                ng-click="updateAbout(contact)">
+                            Update
+                        </button>
+                    </td>
+                </tr>
+            </table>
+
+            <table border="1" class="data display datatable" id="example">
+                <thead>
+                <tr style="border: 3px solid wheat">
+                    <th>About Header</th>
+                    <th>Quotes</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd gradeX" ng-repeat="abt in About">
+                    <th> {{abt.aboutHeader}}</th>
+                    <th>{{abt.aboutQuotes}}</th>
+                    <td>
+                        <input ng-click="editItem($index)" type="button" value="edit" />
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+</div>

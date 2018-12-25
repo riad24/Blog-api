@@ -1,0 +1,63 @@
+﻿
+        <div class="grid_10">
+
+            <div class="box round first grid">
+                <h2>Update Social Media</h2>
+                <div class="block">
+                 <form>
+                    <table class="form">
+                        <tr>
+                            <td>
+                                <label>Facebook</label>
+                            </td>
+                            <td>
+                                <input type="text"  ng-model="socialLink.facebookLink" placeholder="Facebook link.." class="medium" />
+                            </td>
+                        </tr>
+						 <tr>
+                            <td>
+                                <label>Twitter</label>
+                            </td>
+                            <td>
+                                <input type="text"  ng-model="socialLink.twitterLink" placeholder="Twitter link.." class="medium" />
+                            </td>
+                        </tr>
+
+						 <tr>
+                            <td>
+                                <label>LinkedIn</label>
+                            </td>
+                            <td>
+                                <input type="text" ng-model="socialLink.linkedinLink" placeholder="LinkedIn link.." class="medium" />
+                            </td>
+                        </tr>
+
+						 <tr>
+                            <td>
+                                <label>Google Plus</label>
+                            </td>
+                            <td>
+                                <input type="text" ng-model="socialLink.googleLink" placeholder="Google Plus link.." class="medium" />
+                            </td>
+                        </tr>
+
+						 <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" name="submit" ng-click="updateSocialLink(social)" Value="Update" />
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                    <pre>     {{socialLink | json}}</pre>
+                    <input type="text" ng-model="hello">
+                    {{hello}}
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="clear">
+        </div>
+    </div>

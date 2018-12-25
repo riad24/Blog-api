@@ -1,0 +1,33 @@
+﻿ <div class="grid_10">
+            <div class="box round first grid">
+                <h2>Post List</h2>
+                <div class="block">  
+                    <table border="1" class="data display datatable" id="example">
+					<thead>
+						<tr style="border: 3px solid wheat">
+							<th>Post Title</th>
+							<th>Picture</th>
+							<th>Category</th>
+							<th>Author</th>
+							<th>Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="odd gradeX" ng-repeat="post in Posts">
+							<th> {{post.title}}</th>
+							<th>{{post.picture}}</th>
+							<th>{{post.category}}</th>
+							<th>{{post.author}}</th>
+							<th>{{post.date}}</th>
+
+						</tr>
+
+
+					</tbody>
+				</table>
+
+               </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>

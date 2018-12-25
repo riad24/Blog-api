@@ -1,0 +1,30 @@
+<div class="grid_10">
+
+    <div class="box round first grid" style="width:100%;">
+
+        <h2> Dashbord</h2>
+        <div class="block">
+            <div class="Status" style="float: left; width: 20%;  border: 1px solid red;">
+                <h1>total visitor</h1>
+                <h1>today visitor</h1>
+            </div>
+            <div class="RecentPost" style="float: left; width: 25%; padding: 5px;border: 1px solid blue;">
+                <h1>Recent post </h1>
+                <h1>Recent post </h1>
+                <h1>Recent post </h1>
+                <h1>Recent post </h1>
+
+            </div>
+            <div class="user" style="float: left ; padding: 5px; width: 25%;border: 1px solid grey;">
+                <h1>ACTIVE USER</h1>
+            </div>
+            <div class="Information"style="float: left; padding: 5px; width: 25%;border: 1px solid teal;">
+                <h1>Post categories</h1>
+                <div ng-repeat="x in CList">
+                    <h1>{{x.category}}</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿<div class="grid_10">
+
+    <div class="box round first grid">
+        <h2>Add New Category</h2>
+        <div class="block copyblock">
+            <table class="form">
+                <tr>
+                    <td>
+                        <input type="text" name="cat.category" ng-model="cat.category"
+                               placeholder="Enter Category Name..." class="medium"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!--<input type="submit" ng-click="saveCat(cat)" name="submit" Value="Save" />-->
+                        <button ng-if="selectedItemIndex == null"
+                                ng-click="saveCat(cat)"> Add
+                        </button>
+                        <button ng-if="selectedItemIndex != null"
+                                ng-click="updateCat(cat)">
+                            Update
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            <!--{{cat | json}}-->
+
+
+            <h2>Category List</h2>
+            <table class="data display datatable" id="example">
+                <thead>
+                <tr>
+                    <th>Category Name</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr align="center" class="odd gradeX" ng-repeat="category in Categories">
+                    <th>{{category.category}}</th>
+                    <td>
+                        <input ng-click="editCat($index)" type="button" value="edit"/>
+                        <input ng-click="DeleteCat(category)" type="button" value="Delete" />
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="clear">
+</div>
+</div>

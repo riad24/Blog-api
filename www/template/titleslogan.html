@@ -1,0 +1,69 @@
+﻿
+        <div class="grid_10">
+		
+            <div class="box round first grid">
+                <h2>Update Site Title and Description</h2>
+                <div class="block sloginblock">               
+                    <table class="form">
+                        <tr>
+                            <td>
+                                <label>Website Title</label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Enter Website Title..." ng-model="TSC.title" name="TSC.title" class="medium" />
+                            </td>
+                        </tr>
+						 <tr>
+                            <td>
+                                <label>Website Slogan</label>
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Enter Website Slogan..." ng-model="TSC.slogan" name="TSC.slogan" class="medium" />
+                            </td>
+                        </tr>
+						 
+						
+						 <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <!--<input type="submit" name="submit" ng-click="updateTSC(TSC)" Value="Update" />-->
+                                <button ng-if="selectedItemIndex == null"
+                                        ng-click="AddTSC(TSC)"> Add
+                                </button>
+                                <button ng-if="selectedItemIndex != null"
+                                        ng-click="updateTSC(TSC)">
+                                    Update
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <div >
+                        <h2>Title - {{titleSlogan.title}}</h2>
+                        <h2>Slogan - {{titleSlogan.slogan}}</h2>
+                        <table>
+                            <tr>
+                                <th>Title</th>
+                                <th>Slogan</th>
+                                <th>Edit</th>
+
+                            <tr ng-repeat="x in titleSlogan">
+                                <td>{{x.title}}</td>
+                                <td>{{x.slogan}}</td>
+
+                                <td>
+                                    <input ng-click="editItem($index)"   type="button" value="edit" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+
+
+    </div>

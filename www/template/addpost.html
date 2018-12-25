@@ -1,0 +1,112 @@
+﻿<div class="grid_10">
+
+    <div class="box round first grid">
+        <h2>Add New Post</h2>
+        <div class="block">
+
+            <table class="form">
+                <tr>
+                    <td>
+                        <label>Category</label>
+                    </td>
+                    <td>
+                        <!--<label class="item item-select" id="home-select1">-->
+                            <!--<span class="input-label">Age</span>-->
+                            <!--<select name="itemAge" ng-model="item.itemAge"-->
+                                    <!--ng-options="Age.value as Age.title for Age in  Categories">-->
+                                <!--<option value="">Select Age </option>-->
+                            <!--</select>-->
+
+                        <select name="post.category" ng-model="post.category"
+                                ng-options="category.category as category.category for category in Categories">
+                                <option value="">Select Category</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Title</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Enter Post Title..." ng-model="post.title" name="post.title"
+                               class="medium"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top; padding-top: 9px;">
+                        <label>Description</label>
+                    </td>
+                    <td>
+                        <textarea class="tinymce" style="min-height: 50px;min-width:500px;"  ng-model="post.description" name="post.description"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Upload Image</label>
+                    </td>
+                    <td>
+                        <input type="file"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Author</label>
+                    </td>
+                    <td>
+                        <input class="medium" type="text" ng-model="post.author" name=post.author/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Date Picker</label>
+                    </td>
+                    <td>
+                        <input type="date" id="date-picker" ng-model="post.date" name="post.date"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <!--<input type="button" Value="Save" ng-click="savePost(post)"/>-->
+                        <button ng-if="selectedItemIndex == null"
+                                ng-click="savePost(post)"> Add
+                        </button>
+                        <button ng-if="selectedItemIndex != null"
+                                ng-click="updatePost(post)">
+                            Update
+                        </button>
+                    </td>
+                </tr>
+            </table>
+
+            <table border="1" class="data display datatable" id="example">
+                <thead>
+                <tr style="border: 3px solid wheat">
+                    <th>Post Title</th>
+                    <th>Category</th>
+                    <th>Author</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd gradeX" ng-repeat="post in Posts">
+                    <th> {{post.title}}</th>
+                    <th>{{post.category}}</th>
+                    <th>{{post.author}}</th>
+                    <td>
+                        <input ng-click="editItem($index)" type="button" value="edit" />
+                        <input ng-click="DeletePost(post)" type="button" value="Delete" />
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>

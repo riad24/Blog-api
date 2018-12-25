@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title> Admin</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
+    <link href="css/table/demo_page.css" rel="stylesheet" type="text/css" />
+
+    <!--AngularJS-->
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/controllers/catController.js"></script>
+    <script src="js/controllers/categoryListController.js"></script>
+    <script src="js/controllers/DashboardController.js"></script>
+    <script src="js/controllers/indexController.js"></script>
+    <script src="js/controllers/postController.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers/inboxController.js"></script>
+    <script src="js/controllers/changePasswordController.js"></script>
+    <script src="js/controllers/TSCController.js"></script>
+    <script src="js/controllers/AboutController.js"></script>
+    <script src="js/controllers/ContactController.js"></script>
+
+
+    <!-- BEGIN: load jquery -->
+    <script src="js/tempJS/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/tempJS/jquery-ui/jquery.ui.core.min.js"></script>
+    <script src="js/tempJS/jquery-ui/jquery.ui.widget.min.js" type="text/javascript"></script>
+    <script src="js/tempJS/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript"></script>
+    <script src="js/tempJS/jquery-ui/jquery.effects.core.min.js" type="text/javascript"></script>
+    <script src="js/tempJS/jquery-ui/jquery.effects.slide.min.js" type="text/javascript"></script>
+    <script src="js/tempJS/jquery-ui/jquery.ui.mouse.min.js" type="text/javascript"></script>
+    <script src="js/tempJS/jquery-ui/jquery.ui.sortable.min.js" type="text/javascript"></script>
+    <script src="js/tempJS/table/jquery.dataTables.min.js" type="text/javascript"></script>
+    <!-- END: load jquery -->
+    <script type="text/javascript" src="js/tempJS/table/table.js"></script>
+    <script src="js/tempJS/setup.js" type="text/javascript"></script>
+	 <script type="text/javascript">
+        $(document).ready(function () {
+            setupLeftMenu();
+		    setSidebarHeight();
+        });
+    </script>
+
+
+</head>
+<body ng-app="AdminApp">
+
+<div class="container_12">
+
+
+    <!--head function-->
+
+
+    <header ng-include="'template/header.html'"></header>
+    <!--<div ng-include="'template/sidebar.html'"></div>-->
+    <div class="grid_2">
+        <div class="box sidemenu">
+            <div class="block" id="section-menu">
+                <ul class="section menu">
+                    <li><a class="menuitem">Site Option</a>
+                        <ul class="submenu">
+                            <li><a ui-sref="titleSlogan">Title & Slogan</a></li>
+                            <li><a ui-sref="social">Social Media</a></li>
+                            <li><a ui-sref="copyRight">Copyright</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li><a class="menuitem">Update Pages</a>
+                        <ul class="submenu">
+                            <li><a ui-sref="aboutUs">About Us</a></li>
+                            <li><a ui-sref="contactUs">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="menuitem">Category Option</a>
+                        <ul class="submenu">
+                            <li><a ui-sref="addCat" >Add Category</a> </li>
+                            <li><a ui-sref="catList">Category List</a> </li>
+                        </ul>
+                    </li>
+                    <li><a class="menuitem">Post Option</a>
+                        <ul class="submenu">
+                            <li><a ui-sref="addPost">Add Post</a> </li>
+                            <li><a ui-sref="postList">Post List</a> </li>
+                            <li><a ui-sref="catWisePost">Cat wise post Count</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+        <ui-view></ui-view>
+
+
+
+    <div class="clear">
+    </div>
+</div>
+<div class="clear">
+</div>
+
+<div id="site_info">
+        <p>
+         &copy; Copyright <a href="http://helloriad.com">Admin Master</a>. All Rights Reserved.
+        </p>
+    </div>
+</body>
+</html>

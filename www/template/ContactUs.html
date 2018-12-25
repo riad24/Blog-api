@@ -1,0 +1,57 @@
+﻿<div class="grid_10">
+
+    <div class="box round first grid">
+        <h2>Contact Us</h2>
+        <div class="block">
+
+            <table class="form">
+
+                <tr>
+                    <td>
+                        <label>Name</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Enter Your Name" ng-model="contact.name" name="contact.name"
+                               class="medium"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Email</label>
+                    </td>
+                    <td>
+                        <input class="medium" type="email" placeholder="Enter your email" ng-model="contact.email" name="contact.email"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Message</label>
+                    </td>
+                    <td>
+                        <textarea style="min-height: 50px;min-width: 545px;" ng-model="contact.message" name="contact.message"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" Value="Save" ng-click="saveContact(contact)"/>
+                        {{contact}}
+                        <!--<button ng-if="selectedItemIndex == null"-->
+                                <!--ng-click="savePost(post)"> Add-->
+                        <!--</button>-->
+                        <!--<button ng-if="selectedItemIndex != null"-->
+                                <!--ng-click="updatePost(post)">-->
+                            <!--Update-->
+                        <!--</button>-->
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>
