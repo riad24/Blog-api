@@ -1,9 +1,7 @@
 /**
  * Created by Riad Mahmud on 5/9/2017.
  */
-/**
- * Created by Riad Mahmud on 2/13/2017.
- */
+
 var mongoose = require('mongoose');
 // blog Schema
 var categorySchema = mongoose.Schema({
@@ -16,7 +14,8 @@ var categorySchema = mongoose.Schema({
 
 var Blog = module.exports = mongoose.model('cat',categorySchema);
 var CategoryItem ={};
-//Get Post
+//Get category post
+
 CategoryItem.getBlogs = function (callback,limit) {
     Blog.find(callback).limit(limit);
 };
