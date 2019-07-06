@@ -1,7 +1,7 @@
 /**
  * Created by Riad Mahmud on 3/21/2017.
  */
-/// require the express module in server.js =============================
+/// require the express module in server.js =======================================>
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
@@ -10,8 +10,9 @@ var db = require('./app/config/db');
 // set our port
 var port = process.env.PORT || 8001;
 
-
-//app dirname ===========================
+/**
+ * Created app dirname========================================>.
+ */
 app.use(express.static(__dirname + "/www"));
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -31,10 +32,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
  * configure our routes ======================
  */
 var router = require('./app/routes/route')(app);
-// start app ===============================================
-// startup our app at http://localhost:8000
+// start app ===============================================>
 app.listen(port);
-
 // shoutout to the user
 console.log('Please open the URL: http://localhost:' + port);
 
